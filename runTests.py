@@ -35,7 +35,7 @@ jumbo_folders = [
     "test/unit/math/prim/meta",	
     "test/unit/math/prim/prob",	
     # "test/unit/math/rev/core",	
-    # "test/unit/math/rev/err",	
+    "test/unit/math/rev/err",	
     # "test/unit/math/rev/fun",	
     # "test/unit/math/rev/functor",	
     # "test/unit/math/rev/meta",	
