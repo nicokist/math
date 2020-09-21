@@ -381,19 +381,9 @@ int create_files(const int& argc, const char* argv[], const int& index,
   for (int n = start + 1; n < start + 1 + BATCHES + 1; n++) {
     stringstream out_name;
     out_name << out_name_base;
-    out_name << "_" << std::setw(5) << std::setfill('0') << n;
-    if (index == 1)
-      out_name << "_generated_v_test.cpp";
-    else if (index == 2)
-      out_name << "_generated_fd_test.cpp";
-    else if (index == 3)
-      out_name << "_generated_fv_test.cpp";
-    else if (index == 4)
-      out_name << "_generated_ffd_test.cpp";
-    else if (index == 5)
-      out_name << "_generated_ffv_test.cpp";
+    out_name << "_" << std::setw(5) << std::setfill('0') << n << "_generated_test.cpp";
     std::string tmp(out_name.str());
-    outs.push_back(new std::ofstream(tmp.c_str()));
+    outs.push_back(new std::ofstream(tmp.c_str(), std::ios_base::app));
   }
 
   write_includes(outs, in_name);
