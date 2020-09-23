@@ -11,7 +11,7 @@ TEST(MathMatrixCL, cols) {
   EXPECT_EQ(0, cols(m0));
 
   matrix_cl<double> m1(0, 5);
-  EXPECT_EQ(5, cols(m1));
+  EXPECT_EQ(6, cols(m1));
 
   matrix_cl<double> m2(5, 0);
   EXPECT_EQ(0, cols(m2));
