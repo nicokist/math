@@ -220,6 +220,7 @@ pipeline {
                     !skipRemainingStages
                 }
             }
+            failFast true
             parallel {
                 stage('MPI tests') {
                     agent { label 'linux && mpi' }
